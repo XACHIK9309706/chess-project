@@ -5,7 +5,7 @@ venv/
 # Настройки PyCharm
 .idea/
 
-# Python
+# Python кэш
 __pycache__/
 *.py[cod]
 
