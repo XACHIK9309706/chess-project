@@ -1,0 +1,13 @@
+# Виртуальное окружение
+venv/
+.venv/
+
+# Настройки PyCharm
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
+Thumbs.db
