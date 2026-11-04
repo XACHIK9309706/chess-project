@@ -1,16 +1,22 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import tkinter as tk
+from ui.tk_ui import ChessUI
+from ui.splash import SplashScreen
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def create_app(root):
+    app = ChessUI(root)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def main():
+    root = tk.Tk()
+    root.withdraw()
+
+    splash = SplashScreen(root, duration=2000)
+
+    root.after(2000, lambda: [root.deiconify(), create_app(root)])
+
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
